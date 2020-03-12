@@ -6,3 +6,6 @@ npm run start
 ```
 
 ## reference
+
+1. [Nestjs](https://docs.nestjs.com/)
+2. [Pokemon API](https://pokeapi.co/)
