@@ -12,7 +12,9 @@ import { SystemModule } from "./system/system.module";
       definitions: {
         path: join(process.cwd(), "./src/schema.ts"),
         outputAs: "class"
-      }
+      },
+      introspection: true,
+      playground: true
     }),
     SystemModule
   ],
