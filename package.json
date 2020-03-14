@@ -32,7 +32,9 @@
     "graphql-tools": "^4.0.7",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^6.5.4"
+    "rxjs": "^6.5.4",
+    "minimist": ">=1.2.2",
+    "acorn": ">=5.7.4"
   },
   "devDependencies": {
     "@nestjs/cli": "^6.14.2",
