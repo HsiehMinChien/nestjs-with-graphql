@@ -16,6 +16,7 @@ export class AppService {
         </a>
       </div>
     </div>
+    <div>Created by <a href="https://github.com/HsiehMinChien">Hsieh-Min-Chien</a></div>
     `;
   }
 }
