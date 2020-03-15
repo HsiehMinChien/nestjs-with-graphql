@@ -27,7 +27,7 @@ export class AllUrl {
 }
 
 export abstract class IQuery {
-    abstract getPlatformInfo(): System | Promise<System>;
+    abstract getSystemInfo(): System | Promise<System>;
 
     abstract getAllUrl(): AllUrl | Promise<AllUrl>;
 }

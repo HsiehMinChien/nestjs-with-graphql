@@ -3,7 +3,7 @@ import { GraphQLModule } from "@nestjs/graphql";
 import { join } from "path";
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
-import { SystemModule } from "./system/system.module";
+import ServiceModules from "./services";
 
 @Module({
   imports: [
@@ -16,7 +16,7 @@ import { SystemModule } from "./system/system.module";
       introspection: true,
       playground: true
     }),
-    SystemModule
+    ...ServiceModules
   ],
   controllers: [AppController],
   providers: [AppService]

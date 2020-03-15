@@ -1,0 +1,5 @@
+type System {
+  title: String
+  describe: String
+  buildDate: String
+}

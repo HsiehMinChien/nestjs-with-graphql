@@ -1,9 +1,3 @@
-type System {
-  title: String
-  describe: String
-  buildDate: String
-}
-
 type AllUrl {
   ability: String
   berry: String
@@ -22,10 +16,4 @@ type AllUrl {
   stat: String
   type: String
   version: String
-}
-
-# Query
-type Query {
-  getPlatformInfo: System
-  getAllUrl: AllUrl
 }
