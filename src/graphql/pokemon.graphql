@@ -44,5 +44,9 @@ type Query {
   """
   get pokemon, type, and ability url, type is required.
   """
-  getPokemonInfo(type: PokemonUrlPathType!): PokemonInfo
+  getPokemonInfo(
+    type: PokemonUrlPathType!
+    offset: Int
+    limit: Int
+  ): PokemonInfo
 }

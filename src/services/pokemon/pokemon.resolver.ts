@@ -11,7 +11,7 @@ export class PokemonResolvers {
     return await this.pokemonService.getPokemonAllUrl();
   }
   @Query("getPokemonInfo")
-  async getPokemonInfo(@Args() { type }: PokemonDto) {
-    return await this.pokemonService.getPokemonInfo(type);
+  async getPokemonInfo(@Args() args: PokemonDto) {
+    return await this.pokemonService.getPokemonInfo(args);
   }
 }

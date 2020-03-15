@@ -23,9 +23,19 @@ export class PokemonService {
       })
     );
   }
-  getPokemonInfo(type: PokemonUrlPathType): Observable<AxiosResponse<any>> {
+  getPokemonInfo({
+    type,
+    offset,
+    limit
+  }: PokemonDto): Observable<AxiosResponse<any>> {
+    const configs = {
+      params: {
+        offset,
+        limit
+      }
+    };
     return this.httpService
-      .get(`${this.API_URL}/${PokemonUrlPathType[type]}`)
+      .get(`${this.API_URL}/${PokemonUrlPathType[type]}`, configs)
       .pipe(
         map(response => response.data),
         catchError(error => {

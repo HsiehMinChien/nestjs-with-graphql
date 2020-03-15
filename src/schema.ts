@@ -47,7 +47,7 @@ export class PokemonResults {
 export abstract class IQuery {
     abstract getPokemonAllUrl(): PokemonAllUrl | Promise<PokemonAllUrl>;
 
-    abstract getPokemonInfo(type: PokemonUrlPathType): PokemonInfo | Promise<PokemonInfo>;
+    abstract getPokemonInfo(type: PokemonUrlPathType, offset?: number, limit?: number): PokemonInfo | Promise<PokemonInfo>;
 
     abstract getSystemInfo(): System | Promise<System>;
 }
