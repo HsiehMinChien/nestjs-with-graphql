@@ -1,4 +1,22 @@
-type AllUrl {
+enum PokemonUrlPathType {
+  type
+  pokemon
+  ability
+}
+
+type PokemonResults {
+  name: String
+  url: String
+}
+
+type PokemonInfo {
+  count: Int
+  next: String
+  previous: String
+  results: [PokemonResults]
+}
+
+type PokemonAllUrl {
   ability: String
   berry: String
   characteristic: String
@@ -16,4 +34,15 @@ type AllUrl {
   stat: String
   type: String
   version: String
+}
+
+type Query {
+  """
+  get all pokemon api urls.
+  """
+  getPokemonAllUrl: PokemonAllUrl
+  """
+  get pokemon, type, and ability url, type is required.
+  """
+  getPokemonInfo(type: PokemonUrlPathType!): PokemonInfo
 }

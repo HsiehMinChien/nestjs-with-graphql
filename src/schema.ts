@@ -6,7 +6,13 @@
 
 /* tslint:disable */
 /* eslint-disable */
-export class AllUrl {
+export enum PokemonUrlPathType {
+    type = "type",
+    pokemon = "pokemon",
+    ability = "ability"
+}
+
+export class PokemonAllUrl {
     ability?: string;
     berry?: string;
     characteristic?: string;
@@ -26,14 +32,30 @@ export class AllUrl {
     version?: string;
 }
 
-export abstract class IQuery {
-    abstract getSystemInfo(): System | Promise<System>;
+export class PokemonInfo {
+    count?: number;
+    next?: string;
+    previous?: string;
+    results?: PokemonResults[];
+}
 
-    abstract getAllUrl(): AllUrl | Promise<AllUrl>;
+export class PokemonResults {
+    name?: string;
+    url?: string;
+}
+
+export abstract class IQuery {
+    abstract getPokemonAllUrl(): PokemonAllUrl | Promise<PokemonAllUrl>;
+
+    abstract getPokemonInfo(type: PokemonUrlPathType): PokemonInfo | Promise<PokemonInfo>;
+
+    abstract getSystemInfo(): System | Promise<System>;
 }
 
 export class System {
     title?: string;
     describe?: string;
-    buildDate?: string;
+    createdAt?: string;
+    tags?: string[];
+    createdBy?: string;
 }

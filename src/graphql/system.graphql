@@ -1,5 +1,11 @@
 type System {
   title: String
   describe: String
-  buildDate: String
+  createdAt: String
+  tags: [String]
+  createdBy: String
+}
+
+type Query {
+  getSystemInfo: System
 }

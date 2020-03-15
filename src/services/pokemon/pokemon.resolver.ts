@@ -6,8 +6,12 @@ import { PokemonDto } from "./dto/pokemon.dto";
 export class PokemonResolvers {
   constructor(private readonly pokemonService: PokemonService) {}
 
-  @Query("getAllUrl")
+  @Query("getPokemonAllUrl")
   async getAllUrl() {
-    return await this.pokemonService.getAllUrl();
+    return await this.pokemonService.getPokemonAllUrl();
+  }
+  @Query("getPokemonInfo")
+  async getPokemonInfo(@Args() { type }: PokemonDto) {
+    return await this.pokemonService.getPokemonInfo(type);
   }
 }
