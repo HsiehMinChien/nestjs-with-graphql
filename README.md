@@ -9,6 +9,21 @@ npm run start
 
 [Online demo playground](https://nestjs-demo-project.herokuapp.com/graphql)
 
+#### You can try as following command on playground platform
+```
+query {
+  getPokemonInfo(type:pokemon, offset: 10, limit: 60) {
+    count
+    previous
+    next
+    results {
+      name
+      url
+    }
+  }
+}
+```
+
 ## reference
 
 1. [Nestjs](https://docs.nestjs.com/)
